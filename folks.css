@@ -1,0 +1,66 @@
+textarea {
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid white; 
+    margin-bottom: 5%;
+    margin-left: 38%;
+}
+
+.pinkButton {
+    margin-left: 45%;
+    text-decoration: none;
+    background-color: rgb(255, 215, 239);
+    outline: none;
+    border-style: hidden;
+    display: inline-block;
+    margin: 10px;
+    color: rgb(29, 27, 27);
+    box-shadow: 0 0 0 2px white;
+    padding: 20px 0;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+   
+  }
+  span {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  .pinkButton:before, 
+  .pinkButton:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .pinkButton:before{
+    transform: translateX(-100%);
+    background: rgb(255, 168, 207);
+    transition: transform .3s cubic-bezier(.55,.055,.675,.19);
+  }
+  .pinkButton:after {
+    background: hsl(337, 100%, 87%);
+    transform: translateX(100%);
+    transition: transform .3s cubic-bezier(.16,.73,.58,.62) .3s;
+  }
+  .pinkButton:hover:before,
+  .pinkButton:hover:after {transform: translateX(0);}
+
+  .textFolks{
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+  }
+  
+  .divButton{
+     margin-left: 42%;
+  }
