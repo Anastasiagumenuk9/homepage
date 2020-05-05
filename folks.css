@@ -8,7 +8,7 @@ textarea {
 }
 
 .pinkButton {
-    margin-left: 45%;
+    margin: 0 auto;
     text-decoration: none;
     background-color: rgb(255, 215, 239);
     outline: none;
