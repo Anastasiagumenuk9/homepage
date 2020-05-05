@@ -3,18 +3,19 @@ textarea {
     outline: none;
     overflow: hidden;
     border: 1px solid white; 
-    margin-bottom: 5%;
-    margin-left: 38%;
+    margin: 0 auto;
+    align-self: center;
+    display: block;
 }
 
 .pinkButton {
+    align-self: center;
     margin: 0 auto;
     text-decoration: none;
     background-color: rgb(255, 215, 239);
     outline: none;
     border-style: hidden;
-    display: inline-block;
-    margin: 10px;
+    display: block;
     color: rgb(29, 27, 27);
     box-shadow: 0 0 0 2px white;
     padding: 20px 0;
@@ -29,6 +30,7 @@ textarea {
   span {
     font-family: 'Montserrat', sans-serif;
     position: relative;
+    margin: 0 auto;
   }
   .pinkButton:before, 
   .pinkButton:after {
@@ -59,8 +61,4 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 3px;
 
-  }
-  
-  .divButton{
-     margin-left: 42%;
   }
