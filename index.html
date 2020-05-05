@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
+<script src="https://js.cx/libs/animate.js"></script>
 
 <head>
   <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
@@ -38,6 +39,8 @@
   <link rel="me" href="mailto:Anastasiagumenuk96@gmail.com">
   <link rel="me" href="tel:+380967322915">
   <link rel="stylesheet" href="./assets/stylesheets/base.css">
+  <link rel="stylesheet" href="C:\Users\User\Documents\GitHub\homepage\folks.css">
+
 </head>
 
 <body>
@@ -310,9 +313,37 @@
       </div>
     </article>
   </main>
-  <footer>
-    <em>“That's all Folks!”</em>&nbsp;🐷
-  </footer>
+
+  <textarea hidden id="textExample" rows="1" cols="30" class="textFolks"> Thats all folks! 🐷 </textarea>
+  <div class="divButton"> <button class="pinkButton" onclick="animateText(textExample)">Click me</button> </div>
+
+  <script>
+    function animateText(textArea) {
+      let text = textArea.value;
+      let to = text.length,
+        from = 0;
+
+      animate({
+        duration: 5000,
+        timing: bounce,
+        draw: function (progress) {
+          let result = (to - from) * progress + from;
+          textArea.value = text.substr(0, Math.ceil(result))
+          textArea.hidden = false;
+        }
+      });
+    }
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+
+  </script>
+
 </body>
 
 </html>
